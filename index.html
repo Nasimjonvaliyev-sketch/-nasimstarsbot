@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Nasim Stars</title>
+<script src="https://telegram.org/js/telegram-web-app.js"></script>
+<style>
+body {
+    background: #111827;
+    color: white;
+    font-family: Arial, sans-serif;
+    text-align: center;
+    padding: 20px;
+}
+h1 {
+    color: #38bdf8;
+}
+.card {
+    background: #1f2937;
+    padding: 20px;
+    border-radius: 15px;
+    margin: 15px 0;
+}
+button {
+    background: #229ED9;
+    color: white;
+    border: none;
+    padding: 15px;
+    width: 100%;
+    border-radius: 10px;
+    font-size: 18px;
+    margin-top: 10px;
+}
+</style>
+</head>
+<body>
+<h1>⭐ Nasim Stars</h1>
+<p>Telegram Stars sotib olish</p>
+<div class="card">
+    <h2>⭐ 100 Stars</h2>
+    <p>Narxi: 22 000 so'm</p>
+    <button onclick="buyStars(100)">Sotib olish</button>
+</div>
+<div class="card">
+    <h2>⭐ 250 Stars</h2>
+    <p>Narxi: 60 000 so'm</p>
+    <button onclick="buyStars(250)">Sotib olish</button>
+</div>
+<div class="card">
+    <h2>⭐ 500 Stars</h2>
+    <p>Narxi: 120000 so'm</p>
+    <button onclick="buyStars(500)">Sotib olish</button>
+</div>
+<script>
+const tg = window.Telegram.WebApp;
+tg.ready();
+tg.expand();
+function buyStars(amount) {
+    tg.showAlert(
+        amount + " Stars tanlandi. Buyurtma uchun botga yozing."
+    );
+    tg.openTelegramLink("https://t.me/nasimstarsbot");
+}
+</script>
+</body>
+</html>
